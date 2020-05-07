@@ -9,7 +9,7 @@ class Conexion{
     private $con;
 
     public function __construct($param) {
-        $this->con = new mysqli($this->datos["host"],
+        $this->con = new \mysqli($this->datos["host"],
                                 $this->datos["user"],
                                 $this->datos["pass"],
                                 $this->datos["db"]
