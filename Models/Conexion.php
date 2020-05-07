@@ -1,8 +1,28 @@
 <?php
+class Conexion{
+    private $datos = array(
+                         "host"=>"localhost",
+                         "user"=>"diego",
+                         "pass"=>"Diego123456789@",
+                         "db"=>"proyecto"
+                     );
+    private $con;
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    public function __construct($param) {
+        $this->con = new mysqli($this->datos["host"],
+                                $this->datos["user"],
+                                $this->datos["pass"],
+                                $this->datos["db"]
+                         );
+    }
+    
+    public function consultaSimple($sql) {
+        $this->con->query($query);
+    }
+    
+    public function consultaRetorno($sql) {
+        return $this->con->query($query);
+    }
+    
+}
 
