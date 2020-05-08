@@ -14,6 +14,14 @@ class Estudiante{
         
     }
     
+    public function set($atributo, $contenido) {
+        $this->$atributo = $contenido;
+    }
+    
+    public function get($atributo) {
+        return  $this->$atributo;
+    }
+    
     public function listar(){
         $sql = "SELECT t1.* , t2.nombre as nombre_seccion FROM estudiante t1 INNER JOIN seccion t2
                     ON t1.id_seccion = t2.id";
@@ -44,6 +52,7 @@ class Estudiante{
          $sql = "SELECT t1.* , t2.nombre as nombre_seccion FROM estudiante t1 INNER JOIN seccion t2
                     ON t1.id_seccion = t2.id WHERE t1.id = '{$this->id}'";
         $datos = $this->con->consultaRetorno($sql);
+        $row = mysql_fetch_array($datos);
         return $datos;
     }
 
