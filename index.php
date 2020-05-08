@@ -11,7 +11,12 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        phpinfo();
+        /*require_once './Config/Autoload.php';
+        Autoload::run();
+        new Models\Seccion();
+         * 
+         */
         ?>
+        
     </body>
 </html>
