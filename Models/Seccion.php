@@ -5,7 +5,7 @@ class Seccion {
     private $con ;
     
     public function __construct() {
-        $this->$con = new Conexion();
+        $this->con = new Conexion();
     }
     
     public function set($atributo,$contenido) {
@@ -34,15 +34,15 @@ class Seccion {
         $this->con->consultaSimple($sql);
     }
     
-    public function edit($param) {
+    public function edit() {
         $sql = "UPDATE FROM seccion SET nombre = '{$this->nombre}' WHERE id ='{$this->id}'";
         $this->con->consultaSimple($sql);
     }
     
-    public function view($param) {
+    public function view() {
         $sql = "SELECT * FROM seccion WHERE id = '{$this->id}'";
         $datos = $this->con->consultaRetorno($sql);
-        $row = mysql_fetch_array($datos);
+        $row = mysqli_fetch_array($datos);
         return $row;
     }
     

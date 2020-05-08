@@ -4,11 +4,11 @@ class Conexion{
                          "host"=>"localhost",
                          "user"=>"diego",
                          "pass"=>"Diego123456789@",
-                         "db"=>"proyecto"
+                         "db"=>"db_proyecto"
                      );
     private $con;
 
-    public function __construct($param) {
+    public function __construct() {
         $this->con = new \mysqli($this->datos["host"],
                                 $this->datos["user"],
                                 $this->datos["pass"],
@@ -17,11 +17,11 @@ class Conexion{
     }
     
     public function consultaSimple($sql) {
-        $this->con->query($query);
+        $this->con->query($sql);
     }
     
     public function consultaRetorno($sql) {
-        return $this->con->query($query);
+        return $this->con->query($sql);
     }
     
 }

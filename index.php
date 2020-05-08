@@ -11,10 +11,14 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        /*require_once './Config/Autoload.php';
+       /* require_once './Config/Autoload.php';
         Autoload::run();
-        new Models\Seccion();
-         * 
+        $seccion = new Models\Seccion();
+        $estudiante = new Models\Estudiante();
+        $seccion->set("id",1);
+        $reg = $seccion->view();
+        echo $reg["nombre"];
+        echo var_dump( $estudiante->listar() );
          */
         ?>
         
