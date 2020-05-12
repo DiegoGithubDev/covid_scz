@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
+ <?php
        /* require_once './Config/Autoload.php';
         Autoload::run();
         $seccion = new Models\Seccion();
@@ -20,7 +8,11 @@ and open the template in the editor.
         echo $reg["nombre"];
         echo var_dump( $estudiante->listar() );
          */
-        ?>
+        define('DS', DIRECTORY_SEPARATOR);
+        define ('ROOT', realpath(dirname(__FILE__)) );
         
-    </body>
-</html>
+        require_once './Config/Autoload.php';
+        Config\Autoload::run;
+ 
+?>
+ 
