@@ -42,7 +42,7 @@ class Estudiante{
     }
     
     public function edit() {
-        $ql = "UPDATE FROM estudiante SET nombre={$this->nombre}, edad={$this->edad},
+        $ql = "UPDATE estudiante SET nombre={$this->nombre}, edad={$this->edad},
                         promedio='{$this->promedio},id_seccion = '{$this->id_seccion}'
                         WHERE id = '{$this->id}'";
         $this->con->consultaSimple($sql);                
