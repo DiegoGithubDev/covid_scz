@@ -1,8 +1,11 @@
-<?php
+<?php namespace Config;
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+class Enrutador{
+    
+    static public function run(Request $request) {
+        $controlador = $request->getControlador()  . 'Controller';
+        print_r($controlador);
+    }
+}
+
 

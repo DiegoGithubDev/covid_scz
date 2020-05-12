@@ -12,7 +12,12 @@
         define ('ROOT', realpath(dirname(__FILE__)) . DS );
         
         require_once './Config/Autoload.php';
-        Config\Autoload::run;
+        Config\Autoload::run();
+        $request=new Config\Request();
+        //echo $request->getControlador()."/".$request->getMetodo()."/".$request->getArgumento();
+        //print_r($request->getControlador());
+        Config\Enrutador::run($request);
+        
  
 ?>
  
