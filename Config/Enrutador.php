@@ -4,7 +4,8 @@ class Enrutador{
     
     static public function run(Request $request) {
         $controlador = $request->getControlador()  . 'Controller';
-        print_r($controlador);
+        $ruta = ROOT . "Controllers" . DS . $controlador . '.php';
+        print_r($ruta);
     }
 }
 
