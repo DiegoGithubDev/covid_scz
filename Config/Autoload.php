@@ -1,4 +1,4 @@
-<?php
+<?php namespace Config;
 class Autoload {
 
     static function run() {
