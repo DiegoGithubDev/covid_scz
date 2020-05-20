@@ -21,7 +21,8 @@ class Enrutador{
         }else{
             echo 'archivo NO existe';
         }
-        
+       $rutaVista = ROOT."Views".DS.$request->getControlador().DS.$request->getMetodo().".php";
+       require_once $rutaVista;
         
     }
 }
