@@ -9,7 +9,7 @@ class Enrutador{
         $ruta = ROOT . "Controllers" . DS . $controlador . '.php';
         //print_r($ruta);
         if (is_readable($ruta)){
-            //require_once "$ruta";
+            require_once "$ruta";
             $mostrar = "Controllers\\".$controlador;
             $controlador = new $mostrar();
             if (!$argumento){
