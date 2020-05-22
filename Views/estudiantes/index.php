@@ -9,6 +9,7 @@
                   <th scope="col">Nombre</th>
                   <th scope="col">Edad</th>
                   <th scope="col">Promedio</th>
+                  <th scope="col">Acciones</th>
                 </tr>
               </thead>
               <tbody>
@@ -19,6 +20,7 @@
                         <td><?php echo $row["nombre"]; ?></td>
                         <td><?php echo $row["edad"];   ?></td>
                         <td><?php echo $row["promedio"]; ?></td>
+                        <td> <a class="btn btn-warning">editar <?php  ?></a> <a class="btn btn-warning">detalle<?php  ?></a> <a class="btn btn-warning">eliminar<?php  ?></a> </td>
                     </tr>
                   <?php } ?>
               </tbody>
