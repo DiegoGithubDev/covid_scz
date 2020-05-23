@@ -11,10 +11,14 @@ class estudiantesController{
         return $dato;
     }
     
+    public function editar($param) {
+        $this->estudiante->set("id", $param);
+        $dato=$this->estudiante->view();
+        return $dato ;
+    }
+    
     public function ver($num) {
         echo "hola soy el ver del controlador estudiantes numero $num";
     }
        
 }
-
-$estudiantes = new estudiantesController();

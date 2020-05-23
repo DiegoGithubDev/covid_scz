@@ -13,14 +13,18 @@
                 </tr>
               </thead>
               <tbody>
-                  <?php $datos=$estudiantes->index();
+                  <?php 
                     while ($row = mysqli_fetch_array($datos)) { ?>
                     <tr>
                         <td><img  class="img-thumbnail" width="50" height="50" src="<?php echo URL . Views .DS .template . DS. imagenes . DS . $row["imagen"]; ?>"></td>
                         <td><?php echo $row["nombre"]; ?></td>
                         <td><?php echo $row["edad"];   ?></td>
                         <td><?php echo $row["promedio"]; ?></td>
-                        <td> <a class="btn btn-warning">editar <?php  ?></a> <a class="btn btn-warning">detalle<?php  ?></a> <a class="btn btn-warning">eliminar<?php  ?></a> </td>
+                        <td> 
+                            <a class="btn btn-warning" href="<?php echo URL ;?>estudiantes/editar/<?php echo $row["id"]; ?>">editar </a> 
+                            <a class="btn btn-warning">detalle<?php  ?></a> 
+                            <a class="btn btn-warning">eliminar<?php  ?></a> 
+                        </td>
                     </tr>
                   <?php } ?>
               </tbody>
