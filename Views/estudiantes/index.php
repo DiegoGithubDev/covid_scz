@@ -16,7 +16,7 @@
                   <?php 
                     while ($row = mysqli_fetch_array($datos)) { ?>
                     <tr>
-                        <td><img  class="img-thumbnail" width="50" height="50" src="<?php echo URL . Views .DS .template . DS. imagenes . DS . $row["imagen"]; ?>"></td>
+                        <td><img  class="img-thumbnail" width="50" height="50" src="<?php echo URL . "Views" .DS ."template" . DS. "imagenes" . DS . $row["imagen"]; ?>"></td>
                         <td><?php echo $row["nombre"]; ?></td>
                         <td><?php echo $row["edad"];   ?></td>
                         <td><?php echo $row["promedio"]; ?></td>

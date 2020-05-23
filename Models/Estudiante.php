@@ -42,18 +42,24 @@ class Estudiante{
     }
     
     public function edit() {
-        $ql = "UPDATE estudiante SET nombre={$this->nombre}, edad={$this->edad},
-                        promedio='{$this->promedio},id_seccion = '{$this->id_seccion}'
-                        WHERE id = '{$this->id}'";
-        $this->con->consultaSimple($sql);                
+
+        $sql = "UPDATE estudiante SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}, id_seccion = '{$this->id_seccion}',imagen = '{$this->imagen}' WHERE id = '{$this->id}'";
+        echo $this->id;
+        echo $this->nombre;
+        echo $this->edad;
+        echo $this->promedio;
+        echo $this->id_seccion;
+        echo $this->imagen;
+         $ql = "DELETE FROM estudiante WHERE id = '{$this->id}'";
+        $this->con->consultaRetorno($sql);                
     }
     
     public function view() {
-         $sql = "SELECT t1.* , t2.nombre as nombre_seccion FROM estudiante t1 INNER JOIN seccion t2
+         $sql = "SELECT t1.* , t2.id as id_seccion,t2.nombre as nombre_seccion FROM estudiante t1 INNER JOIN seccion t2
                     ON t1.id_seccion = t2.id WHERE t1.id = '{$this->id}'";
         $datos = $this->con->consultaRetorno($sql);
         $row = mysqli_fetch_array($datos);
-        return $datos;
+        return $row;
     }
 
             
