@@ -42,16 +42,15 @@ class Estudiante{
     }
     
     public function edit() {
-
-        $sql = "UPDATE estudiante SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}, id_seccion = '{$this->id_seccion}',imagen = '{$this->imagen}' WHERE id = '{$this->id}'";
         echo $this->id;
         echo $this->nombre;
         echo $this->edad;
         echo $this->promedio;
         echo $this->id_seccion;
         echo $this->imagen;
-         $ql = "DELETE FROM estudiante WHERE id = '{$this->id}'";
-        $this->con->consultaRetorno($sql);                
+        $sql = "UPDATE estudiante SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}, id_seccion = '{$this->id_seccion}',imagen = '{$this->imagen}' WHERE id = '{$this->id}'";
+       // $sql = "UPDATE estudiante SET nombre = '{$this->nombre}' WHERE id = '{$this->id}'";
+        $this->con->consultaSimple($sql);              
     }
     
     public function view() {

@@ -17,7 +17,7 @@
         $request=new Config\Request();
         //echo $request->getControlador()."/".$request->getMetodo()."/".$request->getArgumento();
         //print_r($request->getControlador());
-        include_once "./Views/template.php";
+        require_once "./Views/template.php";
         Config\Enrutador::run($request);
         
  

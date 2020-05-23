@@ -16,11 +16,12 @@ class estudiantesController{
         //echo $_FILES["input_imagen"]["name"];
         if ( $_SERVER['REQUEST_METHOD'] === 'GET' ){
             $this->estudiante->set("id", $param);
-            $dato=$this->estudiante->view();
-            return $dato ;
+            $datos = $this->estudiante->view();
+            return $datos;
+            
         }
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+            echo "post";    
             $id = $param;
             $nombre = $_POST["input_nombre"];
             $edad = $_POST["input_edad"];
