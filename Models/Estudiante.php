@@ -48,8 +48,8 @@ class Estudiante{
         echo $this->promedio;
         echo $this->id_seccion;
         echo $this->imagen;
-        $sql = "UPDATE estudiante SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}, id_seccion = '{$this->id_seccion}',imagen = '{$this->imagen}' WHERE id = '{$this->id}'";
-       // $sql = "UPDATE estudiante SET nombre = '{$this->nombre}' WHERE id = '{$this->id}'";
+        $sql = "UPDATE estudiante SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}', id_seccion = '{$this->id_seccion}',imagen = '{$this->imagen}' WHERE id = '{$this->id}'";
+        //$sql = "UPDATE estudiante SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}', id_seccion = '{$this->id_seccion}' WHERE id = '{$this->id}' ";
         $this->con->consultaSimple($sql);              
     }
     
