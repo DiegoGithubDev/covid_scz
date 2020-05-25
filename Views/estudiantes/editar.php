@@ -6,6 +6,7 @@
             <div class="card-header"><legend>Editar Estudiante</legend></div>
             <div class="card-body">
                 <form method="post" enctype="multipart/form-data" >
+                    <span style="color:red;font-weight:bold"><?php echo (isset($_GET["msg_error"]))? $_GET["msg_error"]:"";?></span>
                   <fieldset>
                     <div class="form-group">
                       <fieldset disabled="">

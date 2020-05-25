@@ -20,8 +20,7 @@ class estudiantesController{
             return $datos;
             
         }
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            echo "post";    
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {  
             $id = $param;
             $nombre = $_POST["input_nombre"];
             $edad = $_POST["input_edad"];
@@ -34,8 +33,21 @@ class estudiantesController{
             $this->estudiante->set("promedio", $promedio);
             $this->estudiante->set("id_seccion", $id_seccion);
             $this->estudiante->set("imagen", $imagen);
-            $this->estudiante->edit();
-            //header("Location: " . URL . "estudiantes");
+            $nombre_imagen = $_FILES["input_imagen"]["name"];
+            $ruta = ROOT . "Views" . DS . "template" . DS ."imagenes" . DS . $nombre_imagen;
+            $allowed_image_extension = array("png","jpg","jpeg");
+            $file_extension = pathinfo( $_FILES["input_imagen"]["name"], PATHINFO_EXTENSION );
+            if ($file_extension && in_array($file_extension, $allowed_image_extension)){
+                $this->estudiante->edit();
+                move_uploaded_file( $_FILES["input_imagen"]["tmp_name"] , $ruta );  
+                header( "Location: " . URL . "estudiantes/index");
+            }else
+            {
+                $msg = " this file is not validate";
+                $msg = urlencode($msg);
+                header( "Location:" . URL."estudiantes/editar/".$id."?msg_error=$msg");
+            }
+            
 
         }
             
