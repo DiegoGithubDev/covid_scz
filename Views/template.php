@@ -26,7 +26,7 @@ class template {
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estudiantes</a>
                             <div class="dropdown-menu" style="">
                               <a class="dropdown-item" href="#">Listar</a>
-                              <a class="dropdown-item" href="#">Agregar</a>
+                              <a class="dropdown-item" href="agregar">AgregarEstudiante</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
