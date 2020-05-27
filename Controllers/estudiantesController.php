@@ -22,8 +22,20 @@ class estudiantesController{
             $this->estudiante->set("promedio", $promedio);
             $this->estudiante->set("id_seccion", $id_seccion);
             $this->estudiante->set("imagen", $imagen);  
-            $this->estudiante->add();
-            header( "Location: " . URL . "estudiantes/index");
+            $nombre_imagen = $_FILES["input_imagen"]["name"];
+            $ruta = ROOT . "Views" . DS . "template" . DS ."imagenes" . DS . $nombre_imagen;
+            $allowed_image_extension = array("png","jpg","jpeg");
+            $file_extension = pathinfo( $_FILES["input_imagen"]["name"], PATHINFO_EXTENSION );
+            if ($file_extension && in_array($file_extension, $allowed_image_extension)){
+                $this->estudiante->add();
+                move_uploaded_file( $_FILES["input_imagen"]["tmp_name"] , $ruta );  
+                header( "Location: " . URL . "estudiantes/index");
+            }else
+            {
+                $msg = " this file is not validate";
+                $msg = urlencode($msg);
+                header( "Location:" . URL."estudiantes/agregar/".$id."?msg_error=$msg");
+            }
         }
             
     }
