@@ -12,7 +12,7 @@ class template {
             </head>
             <body>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">Covid-19-SCZ</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -20,24 +20,31 @@ class template {
                     <div class="collapse navbar-collapse" id="navbarColor01">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="#">Informacion <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estudiantes</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estudiantes</a>
                             <div class="dropdown-menu" style="">
-                              <a class="dropdown-item" href="#">Listar</a>
-                              <a class="dropdown-item" href="agregar">AgregarEstudiante</a>
+                                <a class="dropdown-item" href="<?php echo URL ?>estudiantes/index">Listar</a>
+                              <a class="dropdown-item" href="<?php echo URL ?>estudiantes/agregar">AgregarEstudiante</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Secciones</a>
                             <div class="dropdown-menu" style="">
-                              <a class="dropdown-item" href="#">Listar</a>
-                              <a class="dropdown-item" href="#">Agregar</a>
+                              <a class="dropdown-item" href="<?php echo URL ?>secciones/index">Listar</a>
+                              <a class="dropdown-item" href="<?php echo URL ?>secciones/agregar">Agregar</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Personas</a>
+                            <div class="dropdown-menu" style="">
+                              <a class="dropdown-item" href="<?php echo URL ?>personas/index">Listar</a>
+                              <a class="dropdown-item" href="<?php echo URL ?>personas/agregar">Agregar</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">geolocalizacion</a>
+                          <a class="nav-link" href="<?php echo URL ?>ubicacion/index">Ubicacion Infectados</a>
                         </li>
                       </ul>
                       <form class="form-inline my-2 my-lg-0">
