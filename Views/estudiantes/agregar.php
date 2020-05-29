@@ -29,7 +29,7 @@
                     <div class="form-group">
                       <label for="exampleSelect1">Selecionar Seccion</label>
                       <select name = "input_seccion" class="form-control" id="exampleSelect1">
-                          <option value=""> </option>
+                          <option value=""> </optiextensionson>
                           <?php while ( $row_seccion = mysqli_fetch_array($table_secciones) ) { 
                                 if ($datos["id_seccion"] != $row_seccion["id"]) { ?>
                                     <option value="<?php echo $row_seccion["id"]; ?>"  >  <?php echo $row_seccion["nombre"]; ?> </option>                                
