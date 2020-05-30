@@ -29,9 +29,9 @@ class Persona{
     }
     
     public function add() {
-        $sql = "INSERT INTO persona(id,nombre,apelllido_paterno,apellido_materno,id_seccion,fecha)
-                VALUES(null,'{$this->nombre}','{$this->edad}','{$this->promedio}',
-                            '{$this->imagen}','{$this->id_seccion}',NOW())";
+        $sql = "INSERT INTO persona(id,nombre,apelllido_paterno,apellido_materno,estado_salud,telefono,ubicacion)
+                VALUES(null,'{$this->nombre}','{$this->apelllido_paterno}','{$this->apellido_materno}',
+                            '{$this->estado_salud}','{$this->telefono}','{$this->ubicacion}')";
         $this->con->consultaSimple($sql);
     }
     public function delete() {
