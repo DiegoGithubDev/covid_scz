@@ -11,7 +11,7 @@ class personasController {
         return $datos;
     }
     public function agregar() {
-        if ($_REQUEST['POST'] === 'POST') {
+        if ($_REQUEST['REQUEST_METHOD'] === 'POST') {
             $nombre = $_POST['input_nombre'];
             $apellido_paterno = $_POST['input_apellido_paterno'];
             $apellido_materno = $_POST['input_estado_materno'];
