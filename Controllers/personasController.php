@@ -1,23 +1,14 @@
-<?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-namespace Controllers;
-
-/**
- * Description of personasController
- *
- * @author diego
- */
+<?php namespace Controllers;
+use Models\Persona as persona;
 class personasController {
     private $persona ;
     
+    public function __construct() {
+        $this->persona = new persona();
+    }
     public function index(){
-        
+        $datos = $this->persona->listar();
+        return $datos;
     }
     public function agregar() {
         
