@@ -1,5 +1,5 @@
 <?php namespace Models;
-class Estudiante{
+class Persona{
     private $id;
     private $nombre;
     private $apellido_paterno;
