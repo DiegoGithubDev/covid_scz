@@ -11,10 +11,10 @@ class personasController {
         return $datos;
     }
     public function agregar() {
-        if ($_REQUEST['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nombre = $_POST['input_nombre'];
             $apellido_paterno = $_POST['input_apellido_paterno'];
-            $apellido_materno = $_POST['input_estado_materno'];
+            $apellido_materno = $_POST['input_apellido_materno'];
             $estado_salud = $_POST['input_estado_salud'];
             $telefono = $_POST['input_telefono'];
             $ubucacion = $_POST['input_ubicacion'];
