@@ -29,7 +29,9 @@ class Persona{
     }
     
     public function add() {
-        $sql = "INSERT INTO persona(id,nombre,apelllido_paterno,apellido_materno,estado_salud,telefono,ubicacion)
+        //INSERT INTO `db_proyecto`.`persona` (`nombre`, `apellido_paterno`, `apellido_materno`, `estado_salud`, `telefono`, `ubicacion`) VALUES ('diego', 'mansilla', 'chavez', 'enfermo', '62213725', 'barrio por ahi');
+
+        $sql = "INSERT INTO persona(id,nombre,apellido_paterno,apellido_materno,estado_salud,telefono,ubicacion)
                 VALUES(null,'{$this->nombre}','{$this->apellido_paterno}','{$this->apellido_materno}',
                             '{$this->estado_salud}','{$this->telefono}','{$this->ubicacion}')";
         $this->con->consultaSimple($sql);

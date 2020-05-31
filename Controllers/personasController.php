@@ -17,14 +17,14 @@ class personasController {
             $apellido_materno = $_POST['input_apellido_materno'];
             $estado_salud = $_POST['input_estado_salud'];
             $telefono = $_POST['input_telefono'];
-            $ubucacion = $_POST['input_ubicacion'];
+            $ubicacion = $_POST['input_ubicacion'];
 
             $this->persona->set("nombre", $nombre);
             $this->persona->set("apellido_paterno", $apellido_paterno);
             $this->persona->set("apellido_materno", $apellido_materno);
             $this->persona->set("estado_salud", $estado_salud);
             $this->persona->set("telefono", $telefono);
-            $this->persona->set("ubicacion", $ubucacion);
+            $this->persona->set("ubicacion", $ubicacion);
             $this->persona->add();
             $url_personas = "Location:" . URL . "personas/index";
             header($url_personas);
