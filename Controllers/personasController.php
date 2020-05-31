@@ -56,7 +56,8 @@ class personasController {
             return $datos;
         }
     }
-    public function eliminar(){
-        
+    public function eliminar($id){
+        $this->persona->set("id", $id);
+        $this->persona->delete();
     }
 }
