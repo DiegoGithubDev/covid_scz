@@ -31,9 +31,9 @@ class personasController {
         }
     }
 
-    public function editar() {
+    public function editar($param) {
+        $id = $param;
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $id = $_POST['input_id'];
             $nombre = $_POST['input_nombre'];
             $apellido_paterno = $_POST['input_apellido_paterno'];
             $apellido_materno = $_POST['input_apellido_materno'];
@@ -51,7 +51,6 @@ class personasController {
             $list_person = "Location: ".URL."/persona/index";
             header($list_person);
         }else{
-            $id = $_GET['input_id'];
             $this->persona->set("id", $id);
             $datos = $this->persona->view();
             return $datos;
