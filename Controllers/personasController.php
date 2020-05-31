@@ -48,7 +48,7 @@ class personasController {
             $this->persona->set("telefono", $telefono);
             $this->persona->set("ubicacion", $ubicacion);
             $this->persona->edit();
-            $list_person = "Location: ".URL."/persona/index";
+            $list_person = "Location: ".URL."/personas/index";
             header($list_person);
         }else{
             $this->persona->set("id", $id);
