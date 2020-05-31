@@ -25,7 +25,7 @@
                         <td><?php echo $row["telefono"]; ?></td>
                         <td><?php echo $row["ubicacion"]; ?></td>
                         <td> 
-                            <a class="btn btn-warning" href="<?php echo URL ;?>persona/editar/<?php echo $row["id"]; ?>">editar </a> 
+                            <a class="btn btn-warning" href="<?php echo URL ;?>personas/editar/<?php echo $row["id"]; ?>">editar </a> 
                             <a class="btn btn-warning">detalle<?php  ?></a> 
                             <a class="btn btn-warning">eliminar<?php  ?></a> 
                         </td>
