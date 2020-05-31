@@ -49,8 +49,7 @@ class Persona{
     }
 
     public function view() {
-         $sql = "SELECT t1.* , t2.id as id_seccion,t2.nombre as nombre_seccion FROM estudiante t1 INNER JOIN seccion t2
-                    ON t1.id_seccion = t2.id WHERE t1.id = '{$this->id}'";
+        $sql = "SELECT * FROM persona WHERE id = '{$this->id}'";
         $datos = $this->con->consultaRetorno($sql);
         $row = mysqli_fetch_array($datos);
         return $row;
