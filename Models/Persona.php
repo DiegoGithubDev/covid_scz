@@ -37,7 +37,7 @@ class Persona{
         $this->con->consultaSimple($sql);
     }
     public function delete() {
-        $ql = "DELETE FROM persona WHERE id = '{$this->id}'";
+        $sql = "DELETE FROM persona WHERE id = '{$this->id}'";
         $this->con->consultaSimple($sql);
         
     }
