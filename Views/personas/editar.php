@@ -4,7 +4,11 @@
         <div class="card-body">
             <form method="post" >
                 <span style="color:red;font-weight:bold"></span>
-                <fieldset>
+                   <fieldset>
+                    <div class="form-group">
+                        <label class="col-form-label" for="input_id">id</label>
+                        <input name="input_id" disabled="" class="form-control" id="input_id" type="text">
+                    </div>
                     <div class="form-group">
                         <label class="col-form-label" for="input_nombre">Nombre</label>
                         <input name="input_nombre" class="form-control" id="id_input_nombre" type="text">
