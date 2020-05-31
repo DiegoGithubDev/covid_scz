@@ -59,5 +59,7 @@ class personasController {
     public function eliminar($id){
         $this->persona->set("id", $id);
         $this->persona->delete();
+        $list_person = "Location: ".URL."/personas/index";
+        header($list_person);
     }
 }
