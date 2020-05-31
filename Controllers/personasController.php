@@ -33,7 +33,7 @@ class personasController {
 
     public function editar() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $id = $_POST['id'];
+            $id = $_POST['input_id'];
             $nombre = $_POST['input_nombre'];
             $apellido_paterno = $_POST['input_apellido_paterno'];
             $apellido_materno = $_POST['input_apellido_materno'];
