@@ -43,17 +43,11 @@ class Persona{
     }
     
     public function edit() {
-        echo $this->id;
-        echo $this->nombre;
-        echo $this->edad;
-        echo $this->promedio;
-        echo $this->id_seccion;
-        echo $this->imagen;
-        $sql = "UPDATE estudiante SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}', id_seccion = '{$this->id_seccion}',imagen = '{$this->imagen}' WHERE id = '{$this->id}'";
+        $sql = "UPDATE persona SET nombre = '{$this->nombre}', apellido_paterno = '{$this->apellido_paterno}', apellido_materno = '{$this->apellido_materno}', estado_salud = '{$this->estado_salud}',telefono = '{$this->telefono}', ubicacion = '{$this->ubicacion}' WHERE id = '{$this->id}'";
         //$sql = "UPDATE estudiante SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}', id_seccion = '{$this->id_seccion}' WHERE id = '{$this->id}' ";
-        $this->con->consultaSimple($sql);              
+        $this->con->consultaSimple($sql);
     }
-    
+
     public function view() {
          $sql = "SELECT t1.* , t2.id as id_seccion,t2.nombre as nombre_seccion FROM estudiante t1 INNER JOIN seccion t2
                     ON t1.id_seccion = t2.id WHERE t1.id = '{$this->id}'";
