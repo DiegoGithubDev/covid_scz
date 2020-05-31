@@ -27,7 +27,7 @@
                         <td> 
                             <a class="btn btn-warning" href="<?php echo URL ;?>personas/editar/<?php echo $row["id"]; ?>">editar </a> 
                             <a class="btn btn-warning">detalle<?php  ?></a> 
-                            <a class="btn btn-warning">eliminar<?php  ?></a> 
+                            <a href="<?= URL . "personas/eliminar/" . $row['id']; ?>" class="btn btn-warning">eliminar</a> 
                         </td>
                     </tr>
                   <?php } ?>
