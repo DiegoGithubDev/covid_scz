@@ -5,11 +5,11 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+        labels: [ 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
         datasets: [{
-                label: 'Recuperados por mes',
+                label: 'Recoperados por mes',
                 borderColor: 'rgb(10,171,42)',
-                data: [0, 10, 15, 22, 25, 30, 40]
+                data: [10, 15, 22, 25, 30, 40]
             }]
     },
 
