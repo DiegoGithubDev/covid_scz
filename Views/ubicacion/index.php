@@ -1,6 +1,8 @@
 <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />    
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="<?php echo URL ?>Views/ubicacion/grafica_datos.js" type="text/javascript"></script>
 <style>
        /* Set the size of the div element that contains the map */
       #map {
@@ -31,5 +33,8 @@
             }?>
             <input id="input_cordenadas_json"value='<?php echo json_encode($json); ?>'>
         </div>
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </div> 
 <script src="<?php echo URL ?>Views/ubicacion/ubicacion.js" type="text/javascript"></script>
+    

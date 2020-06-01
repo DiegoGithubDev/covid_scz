@@ -1,0 +1,12 @@
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
+.marker {
+    background-image: url('https://cdn.pixabay.com/photo/2020/04/29/08/24/coronavirus-5107804_960_720.png');
+    background-size: cover;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
