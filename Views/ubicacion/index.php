@@ -3,20 +3,8 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src="<?php echo URL ?>Views/ubicacion/grafica_datos.js" type="text/javascript"></script>
-<style>
-       /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
-       .marker {
-            background-image: url('https://cdn.pixabay.com/photo/2020/04/29/08/24/coronavirus-5107804_960_720.png');
-            background-size: cover;
-            width: 22px;
-            height: 22px;
-            cursor: pointer;
-        }
-    </style>
+<link href="<?php echo URL ?>Views/ubicacion/mapa.css" rel="stylesheet" type="text/css"/>
+
     <h3 id="info">My Google Maps Demo</h3>
     <!--The div element for the map -->
     <div class="container" > 
@@ -34,7 +22,7 @@
             <input id="input_cordenadas_json"value='<?php echo json_encode($json); ?>'>
         </div>
         <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </div> 
 <script src="<?php echo URL ?>Views/ubicacion/ubicacion.js" type="text/javascript"></script>
+
     

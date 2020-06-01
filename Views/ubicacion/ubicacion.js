@@ -1,4 +1,4 @@
-window.onload = function () {
+
     mapboxgl.accessToken = 'pk.eyJ1IjoiZGllZ29tYW5zaWxsYSIsImEiOiJja2Fwd3dzazMwM3o2MnlzMDZ5ZnA0aHZrIn0.pxaN-LPlpHRFOrlSwJgtMg';
     var map = new mapboxgl.Map({
         container: 'map',
@@ -44,7 +44,7 @@ window.onload = function () {
         }]
       };
       
-    
+        
 
     /*var marker = new mapboxgl.Marker()
     .setLngLat([-63.179177, -17.78450])
@@ -93,7 +93,6 @@ window.onload = function () {
        });
     }
      */
-     };     
     function get_json_from_input(){
         var string_json= $('#input_cordenadas_json').val();
         var json =JSON.parse(string_json);
