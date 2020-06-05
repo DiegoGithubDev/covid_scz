@@ -2,9 +2,9 @@
 class Conexion{
     private $datos = array(
                          "host"=>"localhost",
-                         "user"=>"diego",
+                         "user"=>"id13963222_diego",
                          "pass"=>"Diego123456789@",
-                         "db"=>"db_proyecto"
+                         "db"=>"id13963222_db_proyecto"
                      );
     private $con;
 
