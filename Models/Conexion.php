@@ -1,4 +1,5 @@
 <?php namespace Models;
+
 class Conexion{
     private $datos = array(
                          "host"=>"localhost",
